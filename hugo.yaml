@@ -1,4 +1,4 @@
-baseURL: "https://example.org/bblog/"
+baseURL: "https://examplesite.com/"
 languageCode: en-us
 title: "verreld7"
 paginate: 5
