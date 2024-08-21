@@ -2,28 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://examplesite.com/categories/</loc>
+    <loc>https://verreld7.github.io/bblog/categories/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/tags/gsoc/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/posts/2024/gsoc-final-report/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/categories/mathematics/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/posts/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/tags/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/tags/tropical-algebra/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/</loc>
+    <lastmod>2024-08-21T22:25:22+07:00</lastmod>
+  </url><url>
+    <loc>https://verreld7.github.io/bblog/profile/</loc>
     <lastmod>2024-08-20T22:25:22+07:00</lastmod>
   </url><url>
-    <loc>https://examplesite.com/tags/gsoc/</loc>
-    <lastmod>2024-08-20T22:25:22+07:00</lastmod>
-  </url><url>
-    <loc>https://examplesite.com/posts/2024/gsoc-final-report/</loc>
-    <lastmod>2024-08-20T22:25:22+07:00</lastmod>
-  </url><url>
-    <loc>https://examplesite.com/categories/mathematics/</loc>
-    <lastmod>2024-08-20T22:25:22+07:00</lastmod>
-  </url><url>
-    <loc>https://examplesite.com/posts/</loc>
-    <lastmod>2024-08-20T22:25:22+07:00</lastmod>
-  </url><url>
-    <loc>https://examplesite.com/tags/</loc>
-    <lastmod>2024-08-20T22:25:22+07:00</lastmod>
-  </url><url>
-    <loc>https://examplesite.com/tags/tropical-algebra/</loc>
-    <lastmod>2024-08-20T22:25:22+07:00</lastmod>
-  </url><url>
-    <loc>https://examplesite.com/</loc>
-    <lastmod>2024-08-20T22:25:22+07:00</lastmod>
+    <loc>https://verreld7.github.io/bblog/archive/</loc>
   </url>
 </urlset>

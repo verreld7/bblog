@@ -1,6 +1,6 @@
 +++
 title = 'GSoC24 @Sagemath: Final Report'
-date = 2024-08-20T22:25:22+07:00
+date = 2024-08-21T22:25:22+07:00
 draft = false
 tags = ["tropical algebra", "GSoC"]
 categories = ["mathematics"]

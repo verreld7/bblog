@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Mathematics on verreld7</title>
-    <link>https://examplesite.com/categories/mathematics/</link>
+    <link>https://verreld7.github.io/bblog/categories/mathematics/</link>
     <description>Recent content in Mathematics on verreld7</description>
     <generator>Hugo -- 0.133.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 20 Aug 2024 22:25:22 +0700</lastBuildDate>
-    <atom:link href="https://examplesite.com/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Aug 2024 22:25:22 +0700</lastBuildDate>
+    <atom:link href="https://verreld7.github.io/bblog/categories/mathematics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>GSoC24 @Sagemath: Final Report</title>
-      <link>https://examplesite.com/posts/2024/gsoc-final-report/</link>
-      <pubDate>Tue, 20 Aug 2024 22:25:22 +0700</pubDate>
-      <guid>https://examplesite.com/posts/2024/gsoc-final-report/</guid>
+      <link>https://verreld7.github.io/bblog/posts/2024/gsoc-final-report/</link>
+      <pubDate>Wed, 21 Aug 2024 22:25:22 +0700</pubDate>
+      <guid>https://verreld7.github.io/bblog/posts/2024/gsoc-final-report/</guid>
       <description>Overview This summer I participate in Google Summer of Code (GSoC) project: Implementation of Tropical Polynomials and its Corresponding Tropical Hypersurfaces.
 My primary task was to implement tropical polynomials in Sagemath, where I focused on creating new classes that extend polynomial implementation to support coefficient from tropical semirings, along with several methods to manage various functionality. Additionally, I implemented a class for tropical varieties, which facilitates the visualization of tropical hypersurfaces for multivariate tropical polynomials.</description>
     </item>

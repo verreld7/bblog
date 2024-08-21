@@ -1,4 +1,4 @@
-baseURL: "https://examplesite.com/"
+baseURL: "https://verreld7.github.io/bblog/"
 languageCode: en-us
 title: "verreld7"
 paginate: 5
@@ -46,32 +46,32 @@ params:
 
   assets:
     disableHLJS: true
-    favicon: "/assets/favicon.ico"
-    favicon16x16: "/assets/favicon-16x16.png"
-    favicon32x32: "/assets/favicon-32x32.png"
-    apple_touch_icon: "/assets/apple-touch-icon.png"
+    favicon: "assets/favicon.ico"
+    favicon16x16: "assets/favicon-16x16.png"
+    favicon32x32: "assets/favicon-32x32.png"
+    apple_touch_icon: "assets/apple-touch-icon.png"
     # safari_pinned_tab: "/safari-pinned-tab.svg"
 
   label:
     text: "Home"
-    icon: "/assets/favicon.ico"
+    icon: "assets/favicon.ico"
     iconHeight: 30
 
   profileMode:
     enabled: true
     title: "Personal Blog" # optional default will be site title
     # subtitle: "Several stories"
-    imageUrl: "/images/beach.png" # optional
+    imageUrl: "images/beach.png" # optional
     imageTitle: "Home Image" # optional
     imageWidth: 120 # custom size
     imageHeight: 120 # custom size
     buttons:
       - name: Posts
-        url: "/posts"
+        url: "/bblog/posts"
       - name: Archive
-        url: "/archive"
+        url: "archive"
       - name: Profile
-        url: "/profile"
+        url: "profile"
 
   socialIcons: # optional
     - name: github

@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://examplesite.com/sitemap.xml
+Sitemap: https://verreld7.github.io/bblog/sitemap.xml
