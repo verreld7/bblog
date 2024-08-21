@@ -9,12 +9,11 @@
     <lastBuildDate>Wed, 21 Aug 2024 22:25:22 +0700</lastBuildDate>
     <atom:link href="https://verreld7.github.io/bblog/tags/gsoc/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>GSoC24 @Sagemath: Final Report</title>
+      <title>GSoC24 @SageMath: Final Report</title>
       <link>https://verreld7.github.io/bblog/posts/2024/gsoc-final-report/</link>
       <pubDate>Wed, 21 Aug 2024 22:25:22 +0700</pubDate>
       <guid>https://verreld7.github.io/bblog/posts/2024/gsoc-final-report/</guid>
-      <description>Overview This summer I participate in Google Summer of Code (GSoC) project: Implementation of Tropical Polynomials and its Corresponding Tropical Hypersurfaces.
-My primary task was to implement tropical polynomials in Sagemath, where I focused on creating new classes that extend polynomial implementation to support coefficient from tropical semirings, along with several methods to manage various functionality. Additionally, I implemented a class for tropical varieties, which facilitates the visualization of tropical hypersurfaces for multivariate tropical polynomials.</description>
+      <description>Implementation of Tropical Polynomials and its Corresponding Tropical Hypersurfaces</description>
     </item>
   </channel>
 </rss>

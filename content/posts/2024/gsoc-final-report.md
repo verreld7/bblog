@@ -1,7 +1,8 @@
 +++
-title = 'GSoC24 @Sagemath: Final Report'
+title = 'GSoC24 @SageMath: Final Report'
 date = 2024-08-21T22:25:22+07:00
 draft = false
+summary = "Implementation of Tropical Polynomials and its Corresponding Tropical Hypersurfaces"
 tags = ["tropical algebra", "GSoC"]
 categories = ["mathematics"]
 author = "verreld7"
@@ -13,7 +14,7 @@ tocopen = true
 ## Overview
 This summer I participate in Google Summer of Code (GSoC) project: [Implementation of Tropical Polynomials and its Corresponding Tropical Hypersurfaces](https://summerofcode.withgoogle.com/myprojects/details/j1yAryTd).
 
-My primary task was to implement tropical polynomials in Sagemath, where I focused on creating new classes that extend polynomial implementation to support coefficient from tropical semirings, along with several methods to manage various functionality.  Additionally, I implemented a class for tropical varieties, which facilitates the visualization of tropical hypersurfaces for multivariate tropical polynomials.
+My primary task was to implement tropical polynomials in [SageMath](https://www.sagemath.org/), where I focused on creating new classes that extend polynomial implementation to support coefficient from tropical semirings, along with several methods to manage various functionality.  Additionally, I implemented a class for tropical varieties, which facilitates the visualization of tropical hypersurfaces for multivariate tropical polynomials.
 
 ## Work Report
 
@@ -76,4 +77,4 @@ As seen before, a tropical curve consists of line segments and half-lines, refer
 ## Afterword
 Creating new classes and implementing the complex algorithms for various methods was quite challenging. However, the satisfaction of seeing the expected results and the intricate, fascinating graphs made the effort worthwhile.
 
-I would like to express my deepest gratitude to my mentor, Travis Scrimshaw for helpful meetings and email exchanges. His support and guidance were important during my time on the project. I'm also thankful to Google for organizing this incredible event. Moving forward, I hope to continue contributing to Sagemath. Until next time!
+I would like to express my deepest gratitude to my mentor, Travis Scrimshaw for helpful meetings and email exchanges. His support and guidance were important during my time on the project. I'm also thankful to Google for organizing this incredible event. Moving forward, I hope to continue contributing to SageMath. Until next time!
