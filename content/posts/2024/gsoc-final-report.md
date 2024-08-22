@@ -53,7 +53,7 @@ A tropical curve is a piecewise linear structure in $\mathbb{R}^2$ which can be 
 |:-:|:-:|
 |Figure 7. Tropical Curve of $2x^2 + 0xy + 2y^2 + 0x + -1y + 3$ | Figure 8. Graph of $2x^2 + 0xy + 2y^2 + 0x + -1y + 3$ |
 
-The class for tropical curves also provides method to check whether a tropical curve is simple or smooth, calculate the genus, and determine the contribution.
+The class for tropical curves also provides methods to check whether a tropical curve is simple or smooth, calculate the genus, and determine the contribution.
 
 #### Tropical Surface :three:
 A tropical surface is a piecewise linear structure in $\mathbb{R}^3$ which can be seen as *tropical roots* of tropical polynomials in three variables.  The tropical surface consists of planar regions and facets, referred to as cells. Some examples of these are:
