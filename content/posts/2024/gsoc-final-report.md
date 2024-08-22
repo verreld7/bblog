@@ -21,6 +21,7 @@ My primary task was to implement tropical polynomials in [SageMath](https://www.
 List of relevant issues and pull requests:
 * [GSoC 2024: Meta-Ticket for implementing a tropical polynomials #37962](https://github.com/sagemath/sage/issues/37962)
 * [Implement a custom class for tropical polynomials #38291](https://github.com/sagemath/sage/pull/38291)
+* [Implement dual subdivision and weight vectors for tropical variety #38536](https://github.com/sagemath/sage/pull/38536)
 
 ### New classes for Tropical Polynomials :star:
 Developed new element classes specifically designed to handle tropical polynomials, building on the existing tropical semiring implementation in SageMath. We've created a separate class for univariate and multivariate cases, along with a parent class that encapsulates the semiring structure. These classes support operations like (tropical) addition, multiplication, and exponentiation (with scalar).
@@ -52,6 +53,8 @@ A tropical curve is a piecewise linear structure in $\mathbb{R}^2$ which can be 
 |:-:|:-:|
 |Figure 7. Tropical Curve of $2x^2 + 0xy + 2y^2 + 0x + -1y + 3$ | Figure 8. Graph of $2x^2 + 0xy + 2y^2 + 0x + -1y + 3$ |
 
+The class for tropical curves also provides method to check whether a tropical curve is simple or smooth, calculate the genus, and determine the contribution.
+
 #### Tropical Surface :three:
 A tropical surface is a piecewise linear structure in $\mathbb{R}^3$ which can be seen as *tropical roots* of tropical polynomials in three variables.  The tropical surface consists of planar regions and facets, referred to as cells. Some examples of these are:
 
@@ -67,7 +70,36 @@ Dual subdivision is a subdivision of the Newton polygon of tropical polynomials.
 |Figure 11. Dual Subdivision of $2x^2 + 0xy + 2y^2 + 0x + -1y + 3$|Figure 12. Dual Subdivion of $0x^2 + 0xyz + 0x + 0y + 0z + 1$|
 
 ### Weight Vectors ↗
-As seen before, a tropical curve consists of line segments and half-lines, referred to as edges. These edges meet at a vertices, where the balancing condition is satisfied. This balancing condition ensures that the sum of the outgoing slopes at each vertex equals zero, reflecting the equilibrium. Continuing from that, we have successfully extended the concept to tropical surfaces, where the sum of the outgoing normal vectors with respect to a line equals zero. Some examples are:
+As seen before, a tropical curve consists of line segments and half-lines, referred to as edges. These edges meet at a vertices, where the balancing condition is satisfied. This balancing condition ensures that the sum of the outgoing slopes at each vertex equals zero vector. We have also successfully extended the similar concept to tropical surfaces, where the sum of the outgoing normal vectors with respect to a line equals zero vector.
+
+```python
+sage: T = TropicalSemiring(QQ)
+sage: R.<x,y> = PolynomialRing(T)
+sage: p1 = R(2)*x^2 + x*y + R(2)*y^2 + R(3)
+sage: tv1 = p1.tropical_variety()
+sage: tv1.weight_vectors()
+{(1/2, 5/2): [(-1, -1), (0, 2), (1, -1)],
+ (5/2, 1/2): [(-1, -1), (-1, 1), (2, 0)]}
+```
+The above code shows there are $2$ vertices of tropical curve of $2x^2 + 0xy + 2y^2 + 3$. For each of these vertices, it can be seen that the associated list of vectors sums to $(0,0)$.
+
+```python
+sage: T = TropicalSemiring(QQ)
+sage: R.<x,y,z> = PolynomialRing(T)
+sage: p1 = x^2 + x + y + z + R(1)
+sage: tv1 = p1.tropical_variety()
+sage: tv1.weight_vectors()
+[[((t2, t2, t2), {t2 <= 1, 0 <= t2}), [(-1, -1, 2), (-1, 2, -1), (2, -1, -1)]],
+[((0, 0, t2), {0 <= t2}), [(-1, -1, 0), (0, -1, 0), (1, 2, 0)]],
+[((1, 1, t2), {1 <= t2}), [(1, 1, 0), (0, -1, 0), (-1, 0, 0)]],
+[((0, t2, 0), {0 <= t2}), [(1, 0, 1), (0, 0, 1), (-1, 0, -2)]],
+[((1, t2, 1), {1 <= t2}), [(-1, 0, -1), (0, 0, 1), (1, 0, 0)]],
+[((t1, 1, 1), {1 <= t1}), [(0, -1, -1), (0, 0, 1), (0, 1, 0)]],
+[((t1, 2*t1, 2*t1), {t1 <= 0}), [(4, -1, -1), (-2, -4, 5), (-2, 5, -4)]]]
+```
+The above code shows there are $7$ unique line of intersection of tropical surface of $0x^2 + 0x + 0y + 0z + 1$. For each of these lines, it can be seen that the associated list of vectors sums to $(0,0,0)$.
+
+This balancing property applies to all tropical curves and tropical surfaces, indicating that these two geometric structures are balanced graphs.
 
 ## Potential Future Improvements
 * Generalizing the concept of weight vectors to tropical varieties of dimension $n \geq 4$
@@ -75,6 +107,12 @@ As seen before, a tropical curve consists of line segments and half-lines, refer
 * Extending the tropical polynomial semiring to Laurent polynomial iring
 
 ## Afterword
-Creating new classes and implementing the complex algorithms for various methods was quite challenging. However, the satisfaction of seeing the expected results and the intricate, fascinating graphs made the effort worthwhile.
+Creating new classes and implementing the complex algorithms for various methods was quite challenging. However, the satisfaction of seeing the expected results and the fascinating graphs made the effort worthwhile.
 
 I would like to express my deepest gratitude to my mentor, Travis Scrimshaw for helpful meetings and email exchanges. His support and guidance were important during my time on the project. I'm also thankful to Google for organizing this incredible event. Moving forward, I hope to continue contributing to SageMath. Until next time!
+
+## References
+
+1. Diane Maclagan and Bernd Sturmfels, *Introduction to Tropical Geometry*, American Mathematical Society, 2015.
+2. Erwan Brugalle and Kristin Shaw, *A bit of tropical geometry*, The American Mathematical Monthly, 121(7): 563-589, 2014.
+3. Ivana Filipan, *An Invitation to Combinatorial Tropical Geometry*, Conference: 1st Croatian Combinatorial Days, 2017.
