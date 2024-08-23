@@ -70,7 +70,7 @@ Dual subdivision is a subdivision of the Newton polygon of tropical polynomials.
 |Figure 11. Dual Subdivision of $2x^2 + 0xy + 2y^2 + 0x + -1y + 3$|Figure 12. Dual Subdivion of $0x^2 + 0xyz + 0x + 0y + 0z + 1$|
 
 ### Weight Vectors ↗
-As seen before, a tropical curve consists of line segments and half-lines, referred to as edges. These edges meet at a vertices, where the balancing condition is satisfied. This balancing condition ensures that the sum of the outgoing slopes at each vertex equals zero vector. We have also successfully extended the similar concept to tropical surfaces, where the sum of the outgoing normal vectors with respect to a line equals zero vector.
+As seen before, a tropical curve consists of line segments and half-lines, referred to as edges. These edges meet at a vertices, where the balancing condition is satisfied. This balancing condition ensures that the sum of the outgoing slopes at each vertex equals zero. We have also successfully extended the similar concept to tropical surfaces, where the sum of the outgoing normal vectors with respect to a line equals zero.
 
 ```python
 sage: T = TropicalSemiring(QQ)
@@ -103,11 +103,11 @@ This balancing property applies to all tropical curves and tropical surfaces, in
 
 ## Potential Future Improvements
 * Generalizing the concept of weight vectors to tropical varieties of dimension $n \geq 4$
-* Refactor polynomial classes for the semiring polynomials
-* Extending the tropical polynomial semiring to Laurent polynomial iring
+* Extending the tropical polynomial semiring to Laurent polynomial ring
+* Implement division of tropical polynomials in Laurent polynomial ring
 
 ## Afterword
-Creating new classes and implementing the complex algorithms for various methods was quite challenging. However, the satisfaction of seeing the expected results and the fascinating graphs made the effort worthwhile.
+Implementing new classes and developing complex algorithms for various methods was quite challenging. However, the satisfaction of seeing the expected results and the fascinating graphs they produced made the effort worthwhile.
 
 I would like to express my deepest gratitude to my mentor, Travis Scrimshaw for helpful meetings and email exchanges. His support and guidance were important during my time on the project. I'm also thankful to Google for organizing this incredible event. Moving forward, I hope to continue contributing to SageMath. Until next time!
 
