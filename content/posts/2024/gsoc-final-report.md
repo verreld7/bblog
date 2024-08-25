@@ -16,7 +16,7 @@ This summer I participate in Google Summer of Code (GSoC) project: [Implementati
 
 My primary task was to implement tropical polynomials in [SageMath](https://www.sagemath.org/), where I focused on creating new classes that extend polynomial implementation to support coefficient from tropical semirings, along with several methods to manage various functionality.  Additionally, I implemented a class for tropical varieties, which facilitates the visualization of tropical hypersurfaces for multivariate tropical polynomials.
 
-## Work Report
+## Activity Report
 
 List of relevant issues and pull requests:
 * [GSoC 2024: Meta-Ticket for implementing a tropical polynomials #37962](https://github.com/sagemath/sage/issues/37962)
@@ -75,9 +75,9 @@ As seen before, a tropical curve consists of line segments and half-lines, refer
 ```python
 sage: T = TropicalSemiring(QQ)
 sage: R.<x,y> = PolynomialRing(T)
-sage: p1 = R(2)*x^2 + x*y + R(2)*y^2 + R(3)
-sage: tv1 = p1.tropical_variety()
-sage: tv1.weight_vectors()
+sage: p = R(2)*x^2 + x*y + R(2)*y^2 + R(3)
+sage: tv = p.tropical_variety()
+sage: tv.weight_vectors()
 {(1/2, 5/2): [(-1, -1), (0, 2), (1, -1)],
  (5/2, 1/2): [(-1, -1), (-1, 1), (2, 0)]}
 ```
@@ -86,28 +86,28 @@ The above code shows there are $2$ vertices of tropical curve of $2x^2 + 0xy + 2
 ```python
 sage: T = TropicalSemiring(QQ)
 sage: R.<x,y,z> = PolynomialRing(T)
-sage: p1 = x^2 + x + y + z + R(1)
-sage: tv1 = p1.tropical_variety()
-sage: tv1.weight_vectors()
-[[((t2, t2, t2), {t2 <= 1, 0 <= t2}), [(-1, -1, 2), (-1, 2, -1), (2, -1, -1)]],
-[((0, 0, t2), {0 <= t2}), [(-1, -1, 0), (0, -1, 0), (1, 2, 0)]],
-[((1, 1, t2), {1 <= t2}), [(1, 1, 0), (0, -1, 0), (-1, 0, 0)]],
-[((0, t2, 0), {0 <= t2}), [(1, 0, 1), (0, 0, 1), (-1, 0, -2)]],
-[((1, t2, 1), {1 <= t2}), [(-1, 0, -1), (0, 0, 1), (1, 0, 0)]],
-[((t1, 1, 1), {1 <= t1}), [(0, -1, -1), (0, 0, 1), (0, 1, 0)]],
-[((t1, 2*t1, 2*t1), {t1 <= 0}), [(4, -1, -1), (-2, -4, 5), (-2, 5, -4)]]]
+sage: p = x^2 + R(-1)*y + z + R(1)
+sage: tv = p.tropical_variety()
+sage: tv.weight_vectors()
+({0: ((1/2*u2, u2 + 1, u2), {u2 <= 1}),
+  1: ((1/2, 2, u2), {1 <= u2}),
+  2: ((1/2, u2, 1), {2 <= u2}),
+  3: ((u1, 2, 1), {(1/2) <= u1})},
+ {0: [(1, 2, -5/2), (1, -5/2, 2), (-2, 1/2, 1/2)],
+  1: [(-1, -2, 0), (0, 2, 0), (1, 0, 0)],
+  2: [(1, 0, 2), (0, 0, -2), (-1, 0, 0)],
+  3: [(0, 1, 1), (0, 0, -1), (0, -1, 0)]})
 ```
-The above code shows there are $7$ unique line of intersection of tropical surface of $0x^2 + 0x + 0y + 0z + 1$. For each of these lines, it can be seen that the associated list of vectors sums to $(0,0,0)$.
+The above code shows there are $4$ unique line of intersection of tropical surface of $0x^2 + -1y + 0z + 1$. For each of these lines, it can be seen that the associated list of vectors sums to $(0,0,0)$.
 
-This balancing property applies to all tropical curves and tropical surfaces, indicating that these two geometric structures are balanced graphs.
+This balancing property applies to all tropical varieties, indicating that these geometric structures are balanced graphs.
 
 ## Potential Future Improvements
-* Generalizing the concept of weight vectors to tropical varieties of dimension $n \geq 4$
 * Extending the tropical polynomial semiring to Laurent polynomial ring
 * Implement division of tropical polynomials in Laurent polynomial ring
 
 ## Afterword
-Implementing new classes and developing complex algorithms for various methods was quite challenging. However, the satisfaction of seeing the expected results and the fascinating graphs they produced made the effort worthwhile.
+Implementing new classes and developing complex algorithms for various methods was quite challenging. However, the satisfaction of achieving the expected results and producing fascinating plots made the effort worthwhile.
 
 I would like to express my deepest gratitude to my mentor, Travis Scrimshaw for helpful meetings and email exchanges. His support and guidance were important during my time on the project. I'm also thankful to Google for organizing this incredible event. Moving forward, I hope to continue contributing to SageMath. Until next time!
 
