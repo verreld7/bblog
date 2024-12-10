@@ -12,7 +12,7 @@ tocopen = true
 +++
 
 ## Overview
-This summer I participate in Google Summer of Code (GSoC) project: [Implementation of Tropical Polynomials and its Corresponding Tropical Hypersurfaces](https://summerofcode.withgoogle.com/myprojects/details/j1yAryTd).
+This summer I participate in Google Summer of Code (GSoC) project: [Implementation of Tropical Polynomials and its Corresponding Tropical Hypersurfaces](https://summerofcode.withgoogle.com/archive/2024/projects/j1yAryTd).
 
 My primary task was to implement tropical polynomials in [SageMath](https://www.sagemath.org/), where I focused on creating new classes that extend polynomial implementation to support coefficient from tropical semirings, along with several methods to manage various functionality.  Additionally, I implemented a class for tropical varieties, which facilitates the visualization of tropical hypersurfaces for multivariate tropical polynomials.
 
